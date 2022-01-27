@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+    background-color: rgb(245, 240, 245);
+}
+    </style>
+    
+    <div class="container py-5">
+        <!-- <form action="" name="formProduct"> -->
+            <div class="form-group">
+                <label for="productNameInput">Product Name :</label>
+                <input type="text" class="form-control" name="" id="productNameInput">
+
+                <div class="aler alert-danger d-none py-3" id="prodNameAlert">
+                    <p>Please enter a valid product name ,max no of letters=20</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="productPriceInput">Product price($) :</label>
+                <input type="number" class="form-control" name="pName" id="productPriceInput">
+
+                <div class="aler alert-danger d-none py-3" id="prodPriceAlert">
+                    <p>Please enter a valid product price ,max 100000</p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="productCatInput">Product category</label>
+                <input type="text" class="form-control" name="" id="productCatInput">
+
+                <div class="aler alert-danger d-none py-3" id="prodCatAlert">
+                    <p>Please enter a valid product category name ,max no of letters=20</p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="productDescInput">Product description</label>
+                <textarea type="text" class="form-control" name="" id="productDescInput"></textarea>
+
+                <div class="aler alert-danger d-none py-3" id="prodDescAlert">
+                    <p>Please enter a valid product description ,max no of letters=200</p>
+                </div>
+            </div>
+            <button id="mainButton" onclick="addProduct();" class="btn btn-outline-info" >add product</button>
+        <!-- </form>
+         -->
+  
+
+    </div>
+
+    <div class="container">
+        <input type="text" onkeyup="serachProduct(this.value)" class="form-control w-75 m-auto"placeholder="search product">
+        <table class="table w-75 m-auto">
+            <thead>
+                <td>index</td>
+                <td>prod.name</td>
+                <td>prod.price</td>
+                <td>prod.category</td>
+                <td>prod.description</td>
+                <td>update</td>
+                <td>delete</td>
+            </thead>
+            <tbody id="tableBody">
+  
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
